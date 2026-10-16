@@ -6,4 +6,5 @@ with sync_playwright() as p:
     page.goto("https://www.saucedemo.com/")
     title = page.title()
     print(title)
+    print(page.url)
     browser.close()
