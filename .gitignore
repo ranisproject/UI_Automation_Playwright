@@ -1,0 +1,10 @@
+cat > .gitignore <<'EOF'
+.DS_Store
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+test-results/
+playwright-report/
+EOF
