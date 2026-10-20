@@ -14,8 +14,12 @@ with sync_playwright() as p:
     # page.go_back();
     # page.go_forward();
   #   page.reload();
-    back_button = page.locator("//div[contains(text(),'Sauce Labs Backpack')]");
-    is_visible = back_button.is_visible()
-    is_enabled = back_button.is_enabled()
-    print("Is Visible: ", is_visible)
+    # back_button = page.locator("//div[contains(text(),'Sauce Labs Backpack')]");
+    # is_visible = back_button.is_visible()
+    # is_enabled = back_button.is_enabled()
+    # print("Is Visible: ", is_visible)
+    # Traversing
+    # page.locator("//select/child::option[1]").click();
+    # page.locator("select").select_option("az");
+    # page.locator("//option[@value='za']/following-sibling::option[1]").click()
     browser.close()
