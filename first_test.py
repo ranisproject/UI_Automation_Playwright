@@ -45,4 +45,20 @@ with sync_playwright() as p:
     # Scroll up and down
     # page.mouse.wheel(0,500) #scroll down
     # page.mouse.wheel(0,-500) #scroll up
+
+    # Screenshot
+    # page.screenshot(path="screenshot.png", full_page=True)
+
+    # Actions
+    # page.locator("//div[@class='inventory_item_name']").hover() --> Hover on the element
+    # page.locator("//div[@class='inventory_item_name']").dblclick() --> Double click on the element
+    # page.locator("//div[@class='inventory_item_name']").drag_to() --> Drag and drop the element
+    # page.locator("//div[@class='inventory_item_name']").click(button="right") --> Right click on the element
+
+    # Alerts
+    # page.on("dialog", lambda dialog: dialog.accept()) --> Accept the alert
+    # page.on("dialog", lambda dialog: dialog.dismiss()) --> Dismiss the alert
+    # page.on("dialog", lambda dialog: dialog.accept("text")) --> Type text in the alert
+    # page.on("dialog", lambda dialog: dialog.message()) --> Get the message from the alert
+    
     browser.close()
