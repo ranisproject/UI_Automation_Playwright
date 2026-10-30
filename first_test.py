@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import BrowserContext, sync_playwright
 
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
@@ -60,5 +60,23 @@ with sync_playwright() as p:
     # page.on("dialog", lambda dialog: dialog.dismiss()) --> Dismiss the alert
     # page.on("dialog", lambda dialog: dialog.accept("text")) --> Type text in the alert
     # page.on("dialog", lambda dialog: dialog.message()) --> Get the message from the alert
-    
+
+    # Windowshandling
+    # context = page.context()
+    # parent_page = page
+    # for new_page in context.pages(): 
+    #     if new_page != parent_page: 
+    #         page = new_page
+    #         break
+  
+    # IFrame handling
+    # page.frames().get(1).locator("//input[@name='user-name']").fill("standard_user")
+
+    # Waits
+    # in-built wait
+    # page.wait_for_timeout(5000) #wait for 5 seconds
+    # explicit wait
+    # page.wait_for_selector("//div[@class='inventory_item_name']") #wait for the element to be visible
+    # No fluent wait in playwright
+
     browser.close()
